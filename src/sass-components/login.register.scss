@@ -1,0 +1,91 @@
+*{
+margin:0;
+padding:0;
+
+}
+
+
+
+.login{
+    background:whitesmoke;
+    height:100vh;
+    width:100vw;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.wrapper{
+    background:whitesmoke;
+    box-shadow:6px 6px 6px rgba(0,0,0,0.05),
+               -6px -6px 6px rgba(255,255,255,0.4);
+    display:flex;
+    flex-direction: column;
+     align-items:center; 
+      padding:2rem;      
+    
+    
+    h2{
+        
+        padding:1rem;
+    }
+
+
+    input[name=email],input[name=password],input[name=username]{
+        border:none;
+        outline:none;
+        background:none;
+        border-bottom:1px solid rgba(0,0,0,0.5);
+        margin:1rem 0.5rem;
+        padding:0.7rem;
+        width:80%;
+        height:80%;
+         &::placeholder{
+             font-weight:100;
+             padding:1rem;
+         }
+    }
+
+    label{
+        margin:1rem;
+    }
+
+    button{
+        border-radius:15px;
+        padding:1rem;    
+        margin-top:1rem;      
+        border:none;
+        outline:none;
+        box-shadow:
+        2px 2px 3px rgba(0,0,0,0.2);
+        transition:transform 200ms ease-in-out;                    
+        cursor: pointer;   
+         &:hover{
+             transform: scale(1.05);
+         }
+         &:active{
+             box-shadow:none;
+         }
+    }
+
+    .login-button{
+        margin-left:10%;
+        background:rgb(47,44,99);
+        color:white;       
+        margin-right:0.5rem;
+        margin-bottom:0.8rem;
+    }
+
+    .register-button{
+        background:white;
+        color:rgb(47,44,99);      
+           a {
+               border:none;
+            }
+    }
+    .error-text{
+        color:red;
+        font-size:0.7rem;
+    }
+}

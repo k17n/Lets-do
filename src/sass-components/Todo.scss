@@ -1,0 +1,267 @@
+@font-face {
+    src: url("./components-Todo/assets/fonts/AvenirLTStd-Book.otf");
+    font-family: 'MyWebFont';
+     
+}
+@font-face {
+    src: url("./components-Todo/assets/fonts/AvenirLTStd-Medium.otf");
+    font-family: 'MyWebFont-Medium';
+     
+}
+@font-face {
+    src: url("./components-Todo/assets/fonts/AvenirLTStd-Roman.otf");
+    font-family: 'MyWebFont-Roman';
+     
+}
+
+
+
+.todo-ui{
+    display:flex;
+    font-family:'MyWebFont';
+}
+
+
+
+       
+    .left-side{
+        flex-basis:40%;
+        height:100vh;
+
+        h1{
+            margin: 2.5rem 1rem 1rem 1.5rem ;
+            color:#3b3884;
+        }
+        p{
+            margin:0 1.5rem;
+            font-size:1.2rem;
+            color:#3b3884;
+        }
+
+        .custom-ul{
+            color:rgba(0,0,0,0.4);
+            margin-left:2.5rem;
+            font-size:1rem;
+
+            li{
+                margin-bottom:1rem;
+            }
+              
+        }
+
+        .to-do-svg{
+  
+            margin:0 10%;
+          }
+    }
+
+
+    .todo{
+        flex-basis:60%;
+        background: #2f2c63;
+        display:flex;
+        flex-flow:column;
+             
+        .calender{
+            flex-basis:30%;
+            width:85%;
+            margin:0 auto;
+
+             h1{
+                color:white;
+                margin:2rem 2rem 1rem;
+                font-weight:350;
+                letter-spacing: 0.2rem;
+                opacity:0.7;
+             }
+
+             h2{
+                color:white;
+                margin:1rem 2rem;
+                font-weight:350;
+                letter-spacing: 0.2rem;
+                opacity:0.7;
+             }
+
+             .custom-table{
+                width:100%;
+                color:white;
+              
+                margin:2rem;
+                cursor: pointer;
+                position:relative;
+                
+                border-collapse: separate;
+                  border-spacing: 1rem 1em;
+                 font-size:1.2rem;
+              
+              }
+              .selected-td{
+                position:relative;
+                color:white;
+                opacity:1 !important;
+                
+                &::after{
+                    content:'';
+                    width:10px;
+                    height:10px;
+                    border-radius:50%;
+                    background-color:greenyellow;
+                    position:absolute;
+                    bottom:-50%;
+                    left:43%;
+                  }
+                  
+              }
+
+              .left-button , .right-button{
+                border:none;
+                outline: none;
+                position:absolute;
+                padding:0.5rem;
+                cursor: pointer;
+                background: none;
+                opacity:0.8;
+                font-size:1.25rem;
+                color:grey;
+              }
+              .left-button{
+                left:-2.5%;
+                top:34%;
+              }
+              
+              .right-button{
+                right:-2.5%;
+                top:34%;
+              }
+              
+              td{
+                text-align:center;
+                opacity:0.5;
+              }
+              
+              .table-heading{
+                opacity:0.8;
+              }
+
+              .logout {
+                  position:absolute;
+                  top:2%;
+                  right:1%;
+                  border:none;
+                  outline:none;
+                  cursor: pointer;
+                  padding:0.8rem;
+                  border-radius:10px;
+                  background:#2f2c63;
+                  box-shadow:6px 6px 6px rgba(0,0,0,0.5),
+                           -2px -2px 5px rgba(255,255,255,0.2);
+                  color:white;         
+      
+
+            
+              }
+            }
+
+
+            .todo-task{
+                flex-basis:70%;
+                width:85%;
+                 margin:0 auto;
+
+                 h2{
+                    color:white;
+                    font-weight:300;
+                 }
+                 .custom-inputbox{
+                    width:100%;
+                    padding:0.7rem;
+                    margin:1rem 0;
+
+                    &::placeholder{
+                        color:#3b3884;
+                        padding-left:1rem;
+                    }
+
+                     &:focus + .plusdiv {
+                        display:none;
+                  }
+                  }
+
+                  .task-label{
+                    position:relative;
+                  
+                  .plusdiv{
+                    height:1rem;
+                    width:1.5rem;
+                    background:url("./components-Todo/assets/add.svg") no-repeat;
+                    position:absolute;
+                    top:15%;
+                    left:0.8%;                
+                  }
+                  .fa-check{
+                    position:absolute;
+                    top:15%;
+                    right:1%;
+                    color:green;
+                  }
+                }
+
+                .eachtaskwrapper{
+                    width:100%;
+                    background:#554CB0;
+                    padding:0.7rem;
+                    display:flex;
+                    justify-content: space-between;
+                    color:rgba(0, 0, 0,0.5);
+                    margin-bottom:1rem;
+                    animation:slidein 1s ease-in-out;
+                    
+               }
+
+               @keyframes slidein{
+                from{opacity:0;transform:translateY(-10%)}
+                to{opacity:1;transform:translateY(0)}
+              }
+                
+              .taskcheckbox{
+    
+                opacity:0;
+                position:absolute;
+              }
+
+              .customCheckbox{
+                width:0.8rem;
+                height:0.8rem;
+                border-radius:50%;
+                border:2px solid white;
+                margin-right:1rem;
+                
+                
+                    
+              }
+              .taskwrapper{
+                display:flex;
+              }
+
+              
+               [type="checkbox"]:checked + .customCheckbox{
+                    visibility:hidden;
+                    }
+                       
+                    .taskinputbox{
+                        background:none;
+                        border:none;
+                        color:white;
+                        outline:none;
+                        cursor: pointer;
+                      }
+
+                      .fa-times{
+                        cursor: pointer;
+                      }
+
+            
+            }
+    }
+
