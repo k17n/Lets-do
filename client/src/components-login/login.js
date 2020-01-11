@@ -67,7 +67,7 @@ function Login(){
        },
        body: JSON.stringify(postData)
   }
- const response = await fetch('http://localhost:5000/api/Login',options)
+ const response = await fetch('/api/Login',options)
  const data = await response.json()
 
  if (data=="Email or password is wrong"){

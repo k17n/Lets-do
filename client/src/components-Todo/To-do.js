@@ -47,7 +47,7 @@ class Todo extends Component{
                   
                  },
             }
-       const response = await fetch(`http://localhost:5000/Todo/api/${currentDate},${localStorage.getItem("id")}`,options)
+       const response = await fetch(`/Todo/api/${currentDate},${localStorage.getItem("id")}`,options)
          const data = await response.json()
          if(data){
             this.setState({
@@ -112,7 +112,7 @@ class Todo extends Component{
               body: JSON.stringify(postdata)
          }
 
-         fetch('http://localhost:5000/Todo/api',options)
+         fetch('/Todo/api',options)
      
            }
     
@@ -127,7 +127,7 @@ class Todo extends Component{
              taskarray:filteredtask
          })
            
-         fetch(`http://localhost:5000/Todo/delete/${key}`,{
+         fetch(`/Todo/delete/${key}`,{
              method:'DELETE',
              headers: {
                 'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ class Todo extends Component{
       fetcheditfn(key,text){
 
 
-        fetch(`http://localhost:5000/Todo/patch/${key},${text}`,{
+        fetch(`/Todo/patch/${key},${text}`,{
             method:'PATCH',
             headers: {
                'Content-Type': 'application/json',
@@ -192,7 +192,7 @@ class Todo extends Component{
            return  item.key===key
          })
         
-         fetch(`http://localhost:5000/Todo/put/${key}`,{
+         fetch(`/Todo/put/${key}`,{
             method:'PUT',
             headers: {
                'Content-Type': 'application/json',
@@ -217,7 +217,7 @@ class Todo extends Component{
                  },
             }
           
-            const response = await fetch(`http://localhost:5000/Todo/api/${selectedDate},${localStorage.getItem('id')}`,options)
+            const response = await fetch(`/Todo/api/${selectedDate},${localStorage.getItem('id')}`,options)
               const data = await  response.json()
                if(data){
             this.setState({

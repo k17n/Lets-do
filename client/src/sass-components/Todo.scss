@@ -84,10 +84,10 @@
              }
 
              .custom-table{
-                width:100%;
+                
                 color:white;
-              
-                margin:2rem;
+                 width:100%;
+                margin:2rem 0;
                 cursor: pointer;
                 position:relative;
                 
@@ -136,12 +136,15 @@
               }
               
               td{
+                width:14.28%;
                 text-align:center;
                 opacity:0.5;
+               
               }
               
               .table-heading{
                 opacity:0.8;
+            
               }
 
               .logout {
@@ -242,14 +245,20 @@
               }
               .taskwrapper{
                 display:flex;
+                width:100%;
               }
 
               
                [type="checkbox"]:checked + .customCheckbox{
                     visibility:hidden;
                     }
+                   
+                    .taskinputform{
+                      flex:2;
+                    }
                        
                     .taskinputbox{
+                        width:100%;
                         background:none;
                         border:none;
                         color:white;

@@ -71,7 +71,7 @@ function Register(){
        body: JSON.stringify(postdata)
   }
 
-    const response = await fetch('http://localhost:5000/api/register',options)
+    const response = await fetch('/api/register',options)
     const  data = await response.json()
     console.log(data)
    

@@ -54,13 +54,9 @@ function Calender(props){
          }
 
     }    
-   
-      firstarray.map(item=>{
-         if(item===dateno){
-             table=0
-         }else{return}
-            
-      })
+      
+          if(firstarray.includes(dateno)){
+                table=0}  
    
       
 
@@ -78,20 +74,11 @@ function Calender(props){
             
         }
 
-        secondarray.map(item=>{
-            if(item===dateno){
-                table=1
-            }else{return}
-               
-         })
-        
-       
+        if(secondarray.includes(dateno)){
+            table=1}       
+                           
           
-        
-          
-
-
- //third row of dates       
+   //third row of dates       
        
        const thirdarray=[]
       
@@ -105,13 +92,10 @@ function Calender(props){
                   
              
             }
-           
-            thirdarray.map(item=>{
-                if(item===dateno){
-                    table=2
-                }else{return}
-                   
-             })
+            
+   
+            if(thirdarray.includes(dateno)){
+                table=2} 
           
       
           
@@ -132,12 +116,8 @@ function Calender(props){
                  }
             }
          
-            fourtharray.map(item=>{
-                if(item===dateno){
-                    table=3
-                }else{return}
-                   
-             })
+            if(fourtharray.includes(dateno)){
+                table=3} 
               
         
 //fifth row of dates
@@ -155,13 +135,10 @@ function Calender(props){
                  }
             }
            
-            
-            fiftharray.map(item=>{
-                if(item===dateno){
-                    table=4
-                }else{return}
-                   
-             })
+            if(fiftharray.includes(dateno)){
+                table=4} 
+
+             
           
              tableArray =[firstarray,secondarray,thirdarray,fourtharray,fiftharray]
           selectedRow=tableArray[table]
